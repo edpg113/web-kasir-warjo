@@ -1,0 +1,50 @@
+.body {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .hero {
+    padding: 5% 18%;
+  }
+  .container {
+    background: white;
+    padding: 2%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(173, 173, 173, 0.26);
+    width: fit-content;
+    height: auto;
+    table {
+      border-collapse: collapse;
+    }
+    th {
+      padding: 10px 20px;
+    }
+    /* th:nth-child(1) {
+      width: 50px;
+    } */
+    th:nth-child(1) {
+      width: 250px;
+    }
+    th:nth-child(3) {
+      width: 120px;
+    }
+    th:nth-child(6) {
+      width: 100px;
+    }
+    th:nth-child(7) {
+      width: 500rem;
+    }
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(68, 147, 226, 0.26);
+    }
+    tr:nth-child(odd):hover {
+      background: rgba(245, 245, 245, 0.77);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.box {
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.411);
+    width: 750px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .inputRegister {
+    width: 100%;
+    padding: 5%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .inputRegister p {
+    width: 100%;
+    margin: 10px 0 5px 0;
+  }
+  
+  .inputRegister .inputGroup {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .inputRegister input, select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.411);
+  }
+  
+  .inputRegister button {
+    height: 40px;
+    width: 130px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(237, 237, 237, 0.945);
+    color: rgb(10, 10, 10);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .inputRegister button:hover {
+    background: rgba(237, 237, 237, 0.733);
+  }
+  
+  .box:hover {
+    box-shadow: 0 10px 30px rgba(237, 237, 237, 0.082),
+      0 10px 30px rgba(237, 237, 237, 0.041);
+  }

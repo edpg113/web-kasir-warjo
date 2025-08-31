@@ -1,0 +1,54 @@
+.sidebar {
+    background: transparent;
+    width: 300px;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    padding: 6% 1%;
+    .account {
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        span {
+          font-weight: 300;
+          font-size: 14px;
+        }
+      }
+      img {
+        max-width: 50px;
+        margin-right: 5%;
+      }
+    }
+    ul {
+      list-style: none;
+  
+      a {
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(38, 38, 44);
+        padding: 10px;
+        font-size: 15px;
+        li {
+          padding: 5% 25%;
+          width: 230px;
+          transition: all ease-in-out 0.2s;
+          img {
+            position: absolute;
+            max-width: 20px;
+            margin-left: -15%;
+          }
+        }
+      }
+      li:hover {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 3px 5px rgba(173, 173, 173, 0.26);
+      }
+      /* li:hover {
+        background: rgba(173, 173, 173, 0.103);
+        border-radius: 10px;
+      } */
+    }
+  }

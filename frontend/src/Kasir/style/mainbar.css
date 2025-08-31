@@ -1,0 +1,95 @@
+.mainbar {
+  margin: 0 auto;
+  width: 800px;
+  padding: 20px;
+
+  .navbar {
+    margin-bottom: 15%;
+    margin-top: 5%;
+  }
+
+  select {
+    width: 150px;
+    border: none;
+    border-bottom: solid 1px gray;
+    outline: none;
+    padding-bottom: 10px;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .container {
+      width: 350px;
+      padding: 20px;
+      margin: 1% 0;
+      transition: all 0.3s ease;
+
+      .menuItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        input[type="number"] {
+          width: 50px;
+          height: 30px;
+          border: none;
+          border-bottom: solid 1px gray;
+          outline: none;
+          padding-left: 5px;
+        }
+        textarea {
+          width: 250px;
+          padding: 5px;
+          height: 50px;
+          border: none;
+          border-bottom: solid 1px gray;
+          margin-bottom: 15px;
+          outline: none;
+          resize: none;
+        }
+        .icon {
+          margin-right: 20px;
+          margin-top: 20px;
+        }
+
+        .icon img {
+          max-width: 120px;
+          border-radius: 5px;
+        }
+
+        .menuInfo {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          padding-top: 4%;
+        }
+
+        .menuInfo p {
+          margin-bottom: 10px;
+        }
+
+        .menuInfo select {
+          width: 110px;
+          outline: none;
+          height: 30px;
+          padding: 2px;
+          border: none;
+        }
+
+        .price {
+          align-self: flex-end;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+    .container:hover {
+      box-shadow: 0 10px 30px rgba(110, 109, 109, 0.322),
+        0 10px 30px rgba(237, 237, 237, 0.041);
+    }
+  }
+}
