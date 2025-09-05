@@ -3,6 +3,8 @@ import Monitoring from "../components/Monitoring";
 import "../style/monitoring.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Cashin from "../../../../public/assets/stockup.png";
+import Profit from "../../../../public/assets/profit.png";
 
 export default function Dashboard() {
   const [pendapatanHariIni, setPendapatanHariIni] = useState(0);
@@ -36,13 +38,21 @@ export default function Dashboard() {
         <h1>Dashboard</h1>
         <div className="info-cards">
           <div className="card">
-            <h3>Total Penjualan Hari Ini</h3>
+            <h4>Total Penjualan Hari Ini</h4>
             <p>Rp.{stats.totalPenjualanHariIni.toLocaleString("id-ID")}</p>
+              {/* <img src={Cashin} alt="" /> */}
+            <span className="stockup">
+              Cash Inflow
+            </span>
           </div>
 
           <div className="card">
-            <h3>Total Pendapatan</h3>
+            <h4>Total Uang Toko</h4>
             <p>Rp.{stats.totalSeluruhPenjualan.toLocaleString("id-ID")}</p>
+              {/* <img src={Profit} alt="" /> */}
+            <span className="stockdown">
+             Profit
+            </span>
           </div>
         </div>
         <Monitoring />

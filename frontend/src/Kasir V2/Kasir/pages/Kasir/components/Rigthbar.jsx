@@ -3,7 +3,7 @@ import "../style/rightbar.css";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export default function Rigthbar({ cartItems, removeFromCart }) {
+export default function Rigthbar({ cartItems, removeFromCart, fetchMenu }) {
   const totalHarga = cartItems.reduce(
     (total, item) => total + item.hargaProduk * item.qty,
     0
@@ -30,7 +30,9 @@ export default function Rigthbar({ cartItems, removeFromCart }) {
           title: "Transaksi Berhasil",
           // text: "Struk sudah direkam ke sistem.",
           confirmButtonColor: "#3085d6",
-        });
+        }).then(() => {
+          fetchMenu()
+        })
 
         window.removeEventListener("afterprint", handleAfterPrint);
       };

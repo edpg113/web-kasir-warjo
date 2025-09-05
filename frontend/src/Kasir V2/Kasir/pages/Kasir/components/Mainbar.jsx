@@ -6,25 +6,18 @@ export default function Mainbar({
   selectedCategory,
   setSelectedCategory,
   addTocart,
+  menu
 }) {
-  const [menu, setMenu] = useState([]);
+  // const [menu, setMenu] = useState([]);
   const [qtyInputs, setQtyInputs] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [modalItem, setModalItem] = useState(null);
   const [modalQty, setModalQty] = useState(1);
   const [catatan, setCatatan] = useState("");
 
-  const fetchMenu = async () => {
-    try {
-      const response = await axios.get("http://localhost:8000/api/getproduk");
-      setMenu(response.data);
-    } catch (error) {
-      console.error("Error fetching menu data:", error);
-    }
-  };
+ 
 
   useEffect(() => {
-    fetchMenu();
     setQtyInputs([]);
   }, []);
 
@@ -99,7 +92,9 @@ export default function Mainbar({
                 <div className="menuInfo">
                   <h4 className="price">
                     Rp. {item.hargaProduk.toLocaleString("id-ID")}
+                    <p>{item.qty > 0 ? `(${item.qty})` : "Habis"}</p>
                   </h4>
+
                   <button onClick={() => handleBeliClick(item)}>Beli</button>
                 </div>
               </div>
@@ -125,10 +120,6 @@ export default function Mainbar({
               />
             </div>
             <div style={{ marginBottom: "10px" }}>
-              {/* <p>
-                Sisa Stok :{" "}
-                {modalItem && modalItem.qty !== undefined ? modalItem.qty : 0}
-              </p> */}
               <textarea placeholder="Tambahkan catatan (opsional)"></textarea>
             </div>
             <div

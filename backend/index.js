@@ -1,10 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-// middleware
-import { verifyToken } from "./middleware/auth.js";
-
-import loginRoutes from "./routes/login.js"
+import loginRoutes from "./routes/login.js";
 import produkRoutes from "./routes/produk.js";
 import transaksiRoutes from "./routes/transaksi.js";
 import statistikRoutes from "./routes/statistik.js";
@@ -18,12 +15,11 @@ app.use(express.json());
 app.use("/images", express.static("images"));
 
 // daftarin routes
-app.use("/api", loginRoutes)
+app.use("/api", loginRoutes);
 app.use("/api", produkRoutes);
 app.use("/api", transaksiRoutes);
 app.use("/api", statistikRoutes);
 app.use("/api", laporanRoutes);
-
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

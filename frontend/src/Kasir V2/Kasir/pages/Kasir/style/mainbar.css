@@ -38,6 +38,7 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        border: rgb(19, 209, 136) 1px solid;
 
         &:hover {
           background-color: #e0e0e0;
@@ -149,10 +150,13 @@
       }
 
       .price {
-        /* align-self: flex-end; */
+        justify-content: space-between;
+        display: flex;
         font-size: 17px;
         font-weight: 300;
-        /* font-weight: bold; */
+        p {
+          color: gray;
+        }
       }
     }
   }
